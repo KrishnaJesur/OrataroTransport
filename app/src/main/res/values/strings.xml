@@ -1,0 +1,103 @@
+<resources>
+    <string name="app_name">ORATAROTransport</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="user_id">User ID</string>
+    <string name="title_rout">Routs</string>
+    <string name="title_contact_us">Contact Us</string>
+    <string name="title_trip_details">Trip Details</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="trip">Trip</string>
+    <string name="myprofile">My Profile</string>
+    <string name="route_list">Route List</string>
+    <string name="select_route">Select Route</string>
+    <string name="student_list">Student List</string>
+    <string name="select_student">Select Student</string>
+    <string name="notification">Notifications</string>
+    <string name="about_us">About Us</string>
+    <string name="license_documents">Licence &amp; ..</string>
+    <string name="terms_conditions">Terms &amp; C..</string>
+    <string name="instant_messages">Instant Messa..</string>
+    <string name="logout">Logout</string>
+
+    // header strings
+    <string name="bearer">bearer</string>
+    <string name="access_token">access-token</string>
+    <string name="authorization">Authorization</string>
+    <string name="content_type">Content-Type</string>
+
+    //login validation strings
+    <string name="enter_username">Please Enter Username</string>
+    <string name="enter_password">Please Enter Password</string>
+    <string name="messagenotempty">Message should not be empty</string>
+
+    // routeid
+    <string name="busRouteid">BusRouteID</string>
+    <string name="busRoutename">Busroutename</string>
+    <string name="vehicleregno">VehicleRegNo</string>
+    <string name="Routeid">RouteID</string>
+    <string name="isForPickup">isForPickup</string>
+    <string name="currentdate">CurrentDate</string>
+    <string name="deviceId">DeviceID</string>
+    <string name="currenttime">CurrentTime</string>
+    <string name="FromStr">FromStr</string>
+
+    //pickup and drop point strings
+    <string name="pickup">Pick Up</string>
+    <string name="dropoff">Drop-Off</string>
+    <string name="drop">Drop</string>
+    <string name="True">true</string>
+    <string name="False">false</string>
+
+
+    <string name="warningmesage">Something went wrong</string>
+    <string name="starttrip">Start Trip</string>
+    <string name="closetrip">Close Trip</string>
+    <string name="starttripwarningdialog">Are You Sure Want To Start Trip?</string>
+    <string name="closetripwarningdialog">Are You Sure Want to Close Trip?</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+
+    // send messages
+    <string name="send_message">Send Messages</string>
+    <string name="enter_message">Enter Message</string>
+    <string name="cancel">Cancel</string>
+    <string name="send">Send</string>
+    <string name="studentselectionvalidation">Select Atleast One Student To Send Message</string>
+
+    // string array for default mesages for driver to send all parents and students
+    <string-array name="default_messages">
+        <item>Bus Late</item>
+        <item>Bus will not Come.</item>
+        <item>Change of Route</item>
+        <item>Emergency</item>
+    </string-array>
+
+    // string for contact us
+    <string name="phone_no">Phone No : </string>
+    <string name="email">Email : </string>
+    <string name="support_timing">Support Timing : </string>
+    <string name="phone_number">8530974227</string>
+    <string name="email_address">support@orataro.com</string>
+    <string name="timing">10 AM To 6 PM \n Monday To Saturday</string>
+    <string name="error_player">There was an error initializing the YouTubePlayer (%1$s)</string>
+
+    // logout message strings
+
+    <string name="logoutmessage">Are you sure you want to logout?</string>
+
+    // strings for no data found
+    <string name="studentsnotavailable">Students Not Available</string>
+    <string name="noroutesavailable">No Routes Available</string>
+    <string name="docnotavailable">No Documents Available</string>
+
+    // check internet connectivity message
+    <string name="checknwconnection">Check Your Internet Connection</string>
+
+    <string name="location_details">Allow Orataro Transport to turn on your phone GPS for accurate pickup</string>
+    <string name="turnon_gps">Turn on GPS</string>
+    <string name="location_title">GPS turned off</string>
+
+
+</resources>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="mstudentattendancevieModel"
+            type="com.edusunsoft.transport.orataro.ui.activitystudentattendance.StudentAttendanceListViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.activitystudentattendance.StudentAttendanceListActivity">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/app_toolbar_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?actionBarSize"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_rout_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adapter="@{mstudentattendancevieModel.studentAttendanceListAdapter}"
+                android:paddingBottom="@dimen/_10sdp"
+                android:visibility="visible"
+                app:layoutManager="@{mstudentattendancevieModel.layoutManager}"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:listitem="@layout/item_student_attandence" />
+
+            <include
+                android:id="@+id/lyl_no_data_found"
+                layout="@layout/no_data_found_layout"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="myAdapter"
+            type="com.edusunsoft.transport.orataro.adapters.RoutListAdapter" />
+
+        <variable
+            name="mRoutViewModel"
+            type="com.edusunsoft.transport.orataro.ui.activityselectrout.SelectRoutViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.activityselectrout.SelectRoutActivity">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/app_toolbar_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+<!--        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout-->
+<!--            android:id="@+id/refresh_rout_list"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_marginTop="?actionBarSize"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:onRefreshListener="@{()->mRoutViewModel.onRefresh()}"-->
+<!--            app:refreshing="@{mRoutViewModel.isLoading}">-->
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_rout_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                android:adapter="@{mRoutViewModel.routListAdapter}"
+                app:layoutManager="@{mRoutViewModel.layoutManager}"
+                tools:listitem="@layout/item_rout"
+                android:layout_marginTop="?actionBarSize"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp" />
+
+<!--        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

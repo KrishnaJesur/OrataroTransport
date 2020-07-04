@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="mBaseViewModel"
+            type="com.edusunsoft.transport.orataro.base.BaseViewModel" />
+
+        <variable
+            name="myAdapter"
+            type="com.edusunsoft.transport.orataro.ui.activityinstantmessage.StudentListAdapter" />
+
+        <variable
+            name="studentlistViewModel"
+            type="com.edusunsoft.transport.orataro.ui.activityinstantmessage.StudentListViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.activityselectrout.SelectRoutActivity">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/app_toolbar_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+<!--        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout-->
+<!--            android:id="@+id/refresh_rout_list"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_marginTop="?actionBarSize"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:onRefreshListener="@{()->studentlistViewModel.onRefresh()}"-->
+<!--            app:refreshing="@{studentlistViewModel.isLoading}">-->
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_rout_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="?actionBarSize"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:adapter="@{studentlistViewModel.studentListAdapter}"
+                app:layoutManager="@{studentlistViewModel.layoutManager}" />
+
+<!--        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>-->
+
+        <include
+            android:id="@+id/lyl_no_data_found"
+            layout="@layout/no_data_found_layout"
+            android:visibility="@{studentlistViewModel.isShow() ? View.VISIBLE : View.INVISIBLE}" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

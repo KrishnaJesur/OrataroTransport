@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.edusunsoft.transport.orataro">
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <!-- Required to show current location -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+
+    <application
+        android:name=".OrataroApplication"
+        android:allowBackup="false"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@drawable/ic_launcher"
+        android:supportsRtl="true"
+        android:hardwareAccelerated="true"
+        android:theme="@style/AppSplashTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".ui.activitymaps.MapsActivity"
+            android:label="@string/title_activity_maps"
+            android:screenOrientation="fullSensor"></activity>
+
+        <activity
+            android:name=".ui.activitymaps.MapsActivity2"
+            android:label="@string/title_activity_maps"
+            android:screenOrientation="fullSensor"></activity>
+
+        <activity
+            android:name=".ui.activityselectrout.SelectRoutActivity"
+            android:screenOrientation="fullSensor" />
+
+        <activity android:name=".ui.activitylogin.LoginActivity" />
+
+        <activity
+            android:name=".ui.activitysplash.SplashActivity"
+            android:screenOrientation="fullSensor">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".ui.activitydashboard.DashboardActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".ui.activitycontactus.ContactusActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".ui.activitymaps.PermissionActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".ui.activitymaps.LocationServiceActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".ui.activityprofile.ProfileActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".ui.activitytripdetails.TripDetailsActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".ui.activityaboutus.AboutusActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".ui.activitynotification.NotificationActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".ui.activitylicense.LDActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".ui.activitytc.TCActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".ui.activityinstantmessage.StudentListActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".ui.activitydocdetail.DocumentDetailActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".ui.activitystudentattendance.StudentAttendanceListActivity"
+            android:screenOrientation="fullSensor" />
+
+    </application>
+
+</manifest>

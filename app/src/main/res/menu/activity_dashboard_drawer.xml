@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_route_list"
+            android:icon="@drawable/ic_menu_route_list"
+            android:title="Route" />
+
+        <item
+            android:id="@+id/nav_license"
+            android:icon="@drawable/ic_menu_license"
+            android:title="License and Document" />
+
+        <item
+            android:id="@+id/nav_contactus"
+            android:icon="@drawable/ic_menu_contact_us"
+            android:title="Contact us" />
+
+        <item
+            android:id="@+id/nav_aboutus"
+            android:icon="@drawable/ic_menu_about_us"
+            android:title="About Us" />
+
+        <item
+            android:id="@+id/nav_tandc"
+            android:icon="@drawable/ic_menu_terms"
+            android:title="Terms and Conditions" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_menu_logout"
+            android:title="Logout" />
+
+    </group>
+
+</menu>

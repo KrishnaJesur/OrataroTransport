@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="mTripDetailsViewModel"
+            type="com.edusunsoft.transport.orataro.ui.activitytripdetails.TripDetailsViewModel" />
+
+        <variable
+            name="mRout"
+            type="com.edusunsoft.transport.orataro.ui.activitymaps.GetRouteListModel.RouteItem" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_rout_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_rout_title">
+
+
+
+        <TextView
+            android:id="@+id/tv_rout_title"
+            style="@style/Base.TextAppearance.AppCompat.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="3"
+            android:paddingStart="@dimen/_35sdp"
+            android:text="@{mRout.pointName}"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintBottom_toTopOf="@+id/view1"
+            app:layout_constraintEnd_toStartOf="@+id/lyl_location_trackdetail_icon"
+            tools:text="Gangotri Circle - Haridarshan cross road" />
+
+        <RelativeLayout
+            android:id="@+id/lyl_location_trackdetail_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/view1"
+            app:layout_constraintStart_toStartOf="@+id/tv_rout_title"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/img_pickup_icon"
+                android:layout_width="@dimen/_14sdp"
+                android:layout_height="@dimen/_14sdp"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:src="@drawable/pickup_icon"
+                android:visibility="visible"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/img_location"
+                android:layout_width="@dimen/_11sdp"
+                android:layout_height="@dimen/_11sdp"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:src="@drawable/drop_icon"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/img_drop_off"
+                android:layout_width="@dimen/_14sdp"
+                android:layout_height="@dimen/_14sdp"
+                android:layout_marginStart="12dp"
+                android:src="@drawable/ic_blue_marker"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_17sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:background="@color/default_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lyl_location_trackdetail_icon"
+            app:srcCompat="@drawable/pickup_icon" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

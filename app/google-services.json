@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1063473173548",
+    "firebase_url": "https://erporataro.firebaseio.com",
+    "project_id": "erporataro",
+    "storage_bucket": "erporataro.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1063473173548:android:d4c14025547272c8c26d89",
+        "android_client_info": {
+          "package_name": "com.edusunsoft.transport.orataro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1063473173548-d39hdi4lhtis1igc348o8uc0eqcpji36.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.edusunsoft.transport.orataro",
+            "certificate_hash": "76a4b753768cc911873302138f0a268590e5bd7c"
+          }
+        },
+        {
+          "client_id": "1063473173548-8o3qhsnme8kp7er3oeke0u0rphkar7cr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAG1w5IO2n3pLYFBZqgvgURvPgKymka0G0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1063473173548-8o3qhsnme8kp7er3oeke0u0rphkar7cr.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1063473173548-9717nbua9gtgmkpd50ru9vta1s6h7rn6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.edusunsoft.oratarotransport"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

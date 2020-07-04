@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="colorPrimary">#38436F</color>
+    <color name="colorPrimaryDark">#27305B</color>
+    <color name="colorPrimaryDarkTransparent">#8027305B</color>
+    <color name="colorAccent">#FF375BF1</color>
+    <color name="colorAccentTransparent">#80FFFFFF</color>
+
+    <color name="red">#FFC93437</color>
+    <color name="blue">#FF375BF1</color>
+    <color name="light_blue">#096BDB</color>
+    <color name="yellow">#FFF7D23E</color>
+    <color name="green">#FF34A350</color>
+
+    <color name="transparent">#00000000</color>
+
+    <color name="colorBack">#000000</color>
+    <color name="colorBackTransparent">#66000000</color>
+
+    <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#fff</color>
+    <color name="white">#ffffff</color>
+    <color name="off_white">#F9F9F9</color>
+
+    <color name="accent">#9E9E9E</color>
+
+    <color name="nav_background">#333333</color>
+    <color name="black">#000</color>
+
+    <color name="active_green">#3C8845</color>
+    <color name="inactive_red">#ff1155</color>
+
+    <color name="top_color">#3c94ff</color>
+    <color name="bottom_color">#0c4492</color>
+
+    <color name="icon_color">#3962F8</color>
+
+    <color name="text_color">#0d3772</color>
+    <color name="bg_color">#F2F5FA</color>
+    <color name="default_color">#808080</color>
+
+    <color name="all_background">#F2F5FA</color>
+    <color name="light_gray">#F3F5F5</color>
+    <color name="gray_color_code">#a8a8a8</color>
+    <color name="gray_color">#7e7e7e</color>
+
+</resources>

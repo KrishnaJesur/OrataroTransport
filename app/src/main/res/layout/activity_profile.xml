@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <!--        <import type="android.content.Context" />-->
+
+        <variable
+            name="mBaseViewModel"
+            type="com.edusunsoft.transport.orataro.base.BaseViewModel" />
+
+        <variable
+            name="mProfileViewModel"
+            type="com.edusunsoft.transport.orataro.ui.activityprofile.ProfileViewModel" />
+
+        <variable
+            name="appPreference"
+            type="com.edusunsoft.transport.orataro.utils.AppPreference" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/login_bg"
+        tools:context=".ui.activityprofile.ProfileActivity">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/app_toolbar_layout"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="@dimen/_100sdp"
+                android:layout_marginEnd="14dp">
+
+                <FrameLayout
+                    android:id="@+id/frame_kid_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/transparent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="4dp">
+
+                        <LinearLayout
+                            android:id="@+id/ll_kid_detail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="110dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:maxLines="1"
+                                android:text="Name"
+                                android:textColor="@color/blue"
+                                android:textSize="@dimen/_12ssp" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/tv_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:focusable="false"
+                                android:maxLines="1"
+                                android:textSize="@dimen/_14ssp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:maxLines="1"
+                                android:text="Mobile Number"
+                                android:textColor="@color/blue"
+                                android:textSize="@dimen/_12ssp" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/txt_mobile_number"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:focusable="false"
+                                android:maxLines="1"
+                                android:textSize="@dimen/_14ssp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:maxLines="1"
+                                android:text="Blood Group"
+                                android:textColor="@color/blue"
+                                android:textSize="@dimen/_12ssp"
+                                android:visibility="visible" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/txt_blood_group"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:focusable="false"
+                                android:maxLines="1"
+                                android:textSize="@dimen/_14ssp"
+                                android:visibility="visible" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:maxLines="1"
+                                android:text="Address"
+                                android:textColor="@color/blue"
+                                android:textSize="@dimen/_12ssp"
+                                android:visibility="visible" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/txt_address"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:focusable="false"
+                                android:maxLines="1"
+                                android:text=""
+                                android:textSize="@dimen/_14ssp"
+                                android:visibility="visible" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:maxLines="1"
+                                android:text="Type"
+                                android:textColor="@color/blue"
+                                android:textSize="@dimen/_12ssp"
+                                android:visibility="visible" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/txt_type"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:focusable="false"
+                                android:maxLines="1"
+                                android:text=""
+                                android:textSize="@dimen/_14ssp"
+                                android:visibility="visible" />
+
+                            <RadioGroup
+                                android:id="@+id/groupradio"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone">
+
+                                <RadioButton
+                                    android:id="@+id/radia_id1"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Female"
+                                    android:theme="@style/MyRaidoButton" />
+
+                                <RadioButton
+                                    android:id="@+id/radia_id2"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Male"
+                                    android:theme="@style/MyRaidoButton" />
+
+                                <RadioButton
+                                    android:id="@+id/radia_id3"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Other"
+                                    android:theme="@style/MyRaidoButton" />
+
+                            </RadioGroup>
+
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/card_login"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?selectableItemBackground"
+                                app:cardCornerRadius="30dp"
+                                app:cardElevation="0dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.1">
+
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/button_bg"
+                                    android:visibility="gone">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tv_btn_login"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_marginStart="15dp"
+                                        android:layout_marginEnd="15dp"
+                                        android:gravity="center"
+                                        android:text="save"
+                                        android:textColor="@android:color/white"
+                                        android:textSize="@dimen/_14ssp" />
+
+                                    <ProgressBar
+                                        android:id="@+id/login_progress"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:indeterminateTint="@color/colorPrimaryDark"
+                                        android:padding="4dp"
+                                        android:visibility="invisible" />
+
+                                </FrameLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </FrameLayout>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_photo"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    app:civ_border_color="@color/gray_color"
+                    app:civ_border_width="3dp"
+                    app:layout_constraintBottom_toTopOf="@+id/frame_kid_profile"
+                    app:layout_constraintEnd_toEndOf="@+id/frame_kid_profile"
+                    app:layout_constraintStart_toStartOf="@+id/frame_kid_profile"
+                    app:layout_constraintTop_toTopOf="@+id/frame_kid_profile" />
+
+                <!--                <com.edusunsoft.transport.orataro.view.CircleProfileImageView-->
+                <!--                    android:id="@+id/iv_kid_photo"-->
+                <!--                    android:layout_width="120dp"-->
+                <!--                    android:layout_height="120dp"-->
+                <!--                    app:imageUrl="@{mProfileViewModel.imageUrl}"-->
+                <!--                    app:layout_constraintBottom_toTopOf="@+id/frame_kid_profile"-->
+                <!--                    app:layout_constraintEnd_toEndOf="@+id/frame_kid_profile"-->
+                <!--                    app:layout_constraintStart_toStartOf="@+id/frame_kid_profile"-->
+                <!--                    app:layout_constraintTop_toTopOf="@+id/frame_kid_profile" />-->
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:id="@+id/top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize">
+
+                <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:onClick="@{mBaseViewModel::onViewClick}"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:src="@drawable/ic_top_back"
+                    android:visibility="@{mBaseViewModel.isBackShow ? View.VISIBLE : View.INVISIBLE}" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_activity_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="My Profile"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_16ssp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
